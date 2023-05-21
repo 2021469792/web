@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport content="width=device-width, initial-scale=1.0">
+    <title>My Family</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+</head>
+
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border box;
+}
+
+/* Navbar */
+.navbar{
+    display: flex; 
+    justify-content: center;
+    align-item: center;
+    background-color: #BC8286;
+    position: sticky;
+    top: 0;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    margin: 20px 0px;
+}
+.navbar ul li{
+    font-family: century;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform:uppercase;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 8px 25px;
+    border: 1px solid #fff;
+    transition: all .5s ease;
+}
+.navbar ul li a:hover{
+    background-color: #FFFFFF;
+    color: #000000;
+    box-shadow: 0 0 10px #FFFFFF;
+}
+
+/* Body */
+#myfamily{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #D9D9D9;
+}
+.content-section{
+    font-family: 'poppin', sans-serif;
+    text-align: center;
+    color: #000000;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+.section{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('./image/bg.jpg');
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+}
+.title{
+    padding: 30px 100px;
+}
+content h1{
+    font-size: 50px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+content h1:after{
+    content:"";
+    height: 5px;
+    width: 225px;
+    background-color: #000000;
+    display: block;
+    margin: auto;
+}
+content p{
+    font-size: 17px;
+    text-transform: uppercase;
+}
+.slider{
+    width: 500px;
+    height: 300px;
+    background-color: yellow;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    text-align: center;
+    overflow: hidden;
+}
+.image-container{
+    width: 1500px;
+    background-color: pink;
+    height: 300px;
+    clear: both;
+    position: relative;
+    -webkit-transition: left 2s;
+    -moz-transition: left 2s;
+    -o-transition: left 2s;
+    transition: left 2s;
+}
+.slide{
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+#slide-1:target ~ .image-container{
+    left: 0px;
+}
+#slide-2:target ~ .image-container{
+    left: -500px;
+}
+#slide-3:target ~ .image-container{
+    left: -1000px;
+}
+.buttons{
+    position: relative;
+    top: -20px;
+}
+.buttons a{
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border-radius: 50px;
+    background-color: black;
+}
+.footer{
+    margin-below: 150px;
+    width: 70%;
+    padding: 100px 15%;
+    background: #333;
+    color: #fff;
+    display: flex;  
+}
+.footer div{
+    text-align: center;
+}
+.col-2{
+    flex-grow: 2;
+}
+.footer div h3{
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 1pt;
+}
+.col-1 a{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 10px;
+}
+form input{
+    width: 400px;
+    height: 45px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    outline: none;
+    border: none;
+}
+form button{
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 15px;
+    curson: pointer;
+}
+
+/*Home Section*/
+#home{
+    display: flex;
+    flex-direction: column;
+    background-color: #D9D9D9;
+    height: 840px;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+}
+</style>
+</head>
+
+<header>
+    <div class="banner">
+    <center><img src="image/bn2.jpg" width="100%" height="100" align=<"center">
+<nav class="navbar">
+	 <ul>
+	     <li><a href="index.html">Home</a></li>
+	     <li><a href="aboutme.html">About me</a></li>
+	     <li><a href="myfamily.html">My Family</a></li>
+	     <li><a href="myfriend.html">My Friend</a></li>
+	     <li><a href="education.html">Education</a></li>
+	 </ul>
+    </nav>
+</header>
+
+<body>
+     <div class="section">
+        <div class="content-section">
+	     <content>
+	       <h1>My Family</h1>
+               <br>
+               <br>
+               <br>
+               <br>
+                <div class="slider">
+                  <span id="slide-1"></span>
+                  <span id="slide-2"></span>
+                  <span id="slide-3"></span>
+                  <div class="image-container">
+                    <img src="image/family1.jpg" class="slide" width="500" height="300" />
+                    <img src="image/family2.jpg" class="slide" width="500" height="300" />
+                    <img src="image/family3.jpg" class="slide" width="500" height="300" />
+                </div>
+                <div class="buttons">
+                  <a href="#slide-1"></a>
+                  <a href="#slide-2"></a>
+                  <a href="#slide-3"></a>
+ 		     </content>
+                  </div>
+              </div>           
+ 	    </div>           
+   <div class="video" align="center">
+          <div class="title">
+            <h1>Memories</h1>
+            <br>
+              <video width="400" controls>
+                <source src="video/famvd.mp4" type="video/mp4">
+              </video>
+                   
+</div>           
+
+</div>  
+ <div class="footer">
+	  <div class="col-1">
+		<h3>USERFUL LINK</h3>
+		<a href="index.html">Home</a>
+	      <a href="aboutme.html">About me</a>
+	      <a href="myfamily.html">My Family</a>
+	      <a href="myfriend.html">My Friend</a>
+	      <a href="education.html">Education</a>
+	  </div>
+	  <div class="col-2">
+		<h3>NEWSLETTER</h3>
+		<form>
+		    <input type="email" placeholder="Your Name Address" required>
+		    <br>
+  		    <button type="submit">SUBSCRIBE</button>
+		</form>
+	  </div>
+	  <div class="col-3">
+		<h3>CONTACT</h3>	
+		<p>Number:017-9132913</p>
+		<p>Email:sitinrlsyafika@gmail.com</p>
+
+        <div class="social"></div>
+            <a href="https://www.facebook.com/profile.php?id=100014471144632"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</body>
+</html>
